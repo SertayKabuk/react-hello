@@ -19,11 +19,11 @@ import { ExpenseDate } from "./ExpenseDate";
 import "./ExpenseItem.css";
 
 // Declaring type of props - see "Typing Component Props" for more examples
-type ExpenseItemProps = {
+interface ExpenseItemProps {
   message: string;
   title: string;
   date: Date;
-}; /* use `interface` if exporting so that consumers can extend */
+} /* use `interface` if exporting so that consumers can extend */
 
 // Easiest way to declare a Function Component;
 const ExpenseItem = ({
@@ -43,6 +43,7 @@ const ExpenseItem = ({
 };
 
 export { ExpenseItem };
+export type { ExpenseItemProps };
 
 //Class Components readonly
 
