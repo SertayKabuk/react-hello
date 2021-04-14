@@ -15,6 +15,7 @@
 // }
 
 //Function Components
+import { Card } from "./Card";
 import { ExpenseDate } from "./ExpenseDate";
 import "./ExpenseItem.css";
 
@@ -34,15 +35,15 @@ const ExpenseItem = ({
   date,
 }: ExpenseItemProps): JSX.Element => {
   return (
-    <div className="expense-item">
+    <Card className="expense-item">
       <ExpenseDate date={date}></ExpenseDate>
       <div className="expense-item__description">
         <h2>{title}</h2>
         <div className="expense-item__price">{message}</div>
       </div>
-    </div>
+    </Card>
   );
-};
+}
 
 export { ExpenseItem };
 export type { ExpenseItemProps };

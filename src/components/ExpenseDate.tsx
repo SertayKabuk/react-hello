@@ -16,6 +16,6 @@ const ExpenseDate = ({ date }: ExpenseDateProp): JSX.Element => {
       <div className="expense-date__day">{day}</div>
     </div>
   );
-};
+}
 
 export { ExpenseDate };

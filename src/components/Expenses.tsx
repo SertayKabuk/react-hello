@@ -1,9 +1,10 @@
 import { ExpenseItem, ExpenseItemProps } from "./ExpenseItem";
+import { Card } from "./Card";
 import "./Expenses.css";
 
 type ExpenseProp = {
   expenseItemList: Array<ExpenseItemProps>;
-};
+}
 
 const Expenses = ({ expenseItemList }: ExpenseProp): JSX.Element => {
   const items: Array<JSX.Element> = [];
@@ -11,7 +12,7 @@ const Expenses = ({ expenseItemList }: ExpenseProp): JSX.Element => {
   expenseItemList.forEach((element) => {
     items.push(
       <ExpenseItem
-        key={element.id}
+        key={element.id} //key must be added if an array of elements created programmatically //skabuk
         id={element.id}
         message={element.message}
         title={element.title}
@@ -20,7 +21,7 @@ const Expenses = ({ expenseItemList }: ExpenseProp): JSX.Element => {
     );
   });
 
-  return <div className="expenses">{items}</div>;
-};
+  return <Card className="expenses">{items}</Card>;
+}
 
 export { Expenses };
