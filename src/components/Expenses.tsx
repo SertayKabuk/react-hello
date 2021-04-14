@@ -11,6 +11,8 @@ const Expenses = ({ expenseItemList }: ExpenseProp): JSX.Element => {
   expenseItemList.forEach((element) => {
     items.push(
       <ExpenseItem
+        key={element.id}
+        id={element.id}
         message={element.message}
         title={element.title}
         date={element.date}

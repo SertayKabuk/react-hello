@@ -20,6 +20,7 @@ import "./ExpenseItem.css";
 
 // Declaring type of props - see "Typing Component Props" for more examples
 interface ExpenseItemProps {
+  id: number;
   message: string;
   title: string;
   date: Date;
@@ -27,6 +28,7 @@ interface ExpenseItemProps {
 
 // Easiest way to declare a Function Component;
 const ExpenseItem = ({
+  id,
   message,
   title,
   date,
