@@ -1,3 +1,5 @@
+//Class Components
+
 // /**
 //  * @class ExpenseItem
 //  */
@@ -12,17 +14,37 @@
 //   }
 // }
 
+//Function Components
+import { ExpenseDate } from "./ExpenseDate";
+import "./ExpenseItem.css";
 
 // Declaring type of props - see "Typing Component Props" for more examples
 type ExpenseItemProps = {
-    message: string;
-  }; /* use `interface` if exporting so that consumers can extend */
-  
-  // Easiest way to declare a Function Component; return type is inferred.
-  const ExpenseItem = ({ message }: ExpenseItemProps): JSX.Element => <h2>Expense Item {message}</h2>;
+  message: string;
+  title: string;
+  date: Date;
+}; /* use `interface` if exporting so that consumers can extend */
 
-  export {ExpenseItem}
+// Easiest way to declare a Function Component;
+const ExpenseItem = ({
+  message,
+  title,
+  date,
+}: ExpenseItemProps): JSX.Element => {
+  return (
+    <div className="expense-item">
+      <ExpenseDate date={date}></ExpenseDate>
+      <div className="expense-item__description">
+        <h2>{title}</h2>
+        <div className="expense-item__price">{message}</div>
+      </div>
+    </div>
+  );
+};
 
+export { ExpenseItem };
+
+//Class Components readonly
 
 // /**
 //  * @class ExpenseItem
