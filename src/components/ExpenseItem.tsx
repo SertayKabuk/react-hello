@@ -20,7 +20,7 @@ import { ExpenseDate } from "./ExpenseDate";
 import "./ExpenseItem.css";
 
 // Declaring type of props - see "Typing Component Props" for more examples
-interface ExpenseItemProps {
+export interface ExpenseItemProps {
   id: number;
   message: string;
   title: string;
@@ -46,7 +46,6 @@ const ExpenseItem = ({
 }
 
 export { ExpenseItem };
-export type { ExpenseItemProps };
 
 //Class Components readonly
 
